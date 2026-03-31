@@ -5,7 +5,6 @@ $title="{$page->title}｜{$site->title}";
 $ogp_image=$site->url.'/images/ogp_image.jpg';
 $desc=$page->desc?:$site->desc;
 $locale=$page->locale??'ja-JP';
-$bem=WPBEM::section('page');
 enqueue_style('/css/common.css',null,['materialicons']);
 enqueue_script('/js/common.js',null,['react']);
 enqueue_style('css/style.css');
@@ -33,8 +32,8 @@ enqueue_script('js/script.js',null,['react']);
 
 <?php $page->render_deps(); ?>
 </head>
-<?php ob_start(); ?>
-<body class="site-body-">
-	<div class="site-cloak-" id="SiteCloak"></div>
-	<header class="site-header-" id="SiteHeader"></header>
-	<main class="site-main-">
+<body class="site-body">
+	<div class="site-cloak" id="SiteCloak"></div>
+	<header class="site-header" id="SiteHeader"></header>
+	<?php ob_start(); ?>
+	<main class="site-main">

@@ -1,0 +1,23 @@
+{
+    "html.customData": [
+        ".vscode/block-tags.json"
+    ],
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "**/blocks/**/schema.json"
+            ],
+            "url": "/_compiler/inc/schema/block.json"
+        },
+        {
+            "fileMatch": [
+                "**/blocks/*/schema.json"
+            ],
+            "url": "/_compiler/inc/schema/block.json"
+        }
+    ],
+    "css.styleSheets": [
+        "dist/**/common.css",
+        "dist/**/common/*.css"
+    ]
+}

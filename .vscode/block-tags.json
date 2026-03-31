@@ -1,0 +1,78 @@
+{
+    "tags": [
+        {
+            "name": "block-billboard",
+            "attributes": [
+                {
+                    "name": "className"
+                },
+                {
+                    "name": "bg"
+                }
+            ]
+        },
+        {
+            "name": "block-box",
+            "attributes": [
+                {
+                    "name": "className"
+                }
+            ]
+        },
+        {
+            "name": "block-cards",
+            "attributes": [
+                {
+                    "name": "className"
+                }
+            ]
+        },
+        {
+            "name": "block-dimension",
+            "attributes": [
+                {
+                    "name": "className"
+                }
+            ]
+        },
+        {
+            "name": "block-news",
+            "attributes": [
+                {
+                    "name": "className"
+                },
+                {
+                    "name": "json"
+                }
+            ]
+        },
+        {
+            "name": "block-pagenav",
+            "attributes": [
+                {
+                    "name": "className"
+                }
+            ]
+        },
+        {
+            "name": "block-section",
+            "attributes": [
+                {
+                    "name": "id"
+                },
+                {
+                    "name": "className"
+                },
+                {
+                    "name": "level"
+                },
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "alt"
+                }
+            ]
+        }
+    ]
+}

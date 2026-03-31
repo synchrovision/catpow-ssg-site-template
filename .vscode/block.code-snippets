@@ -1,0 +1,87 @@
+{
+    "block-billboard": {
+        "scope": "html",
+        "prefix": "block-billboard",
+        "body": [
+            "<block-billboard className=\"${1}\" bg=\"${2}\">",
+            "\t<title>${3}</title>",
+            "\t<lead>${4}</lead>",
+            "\t<contents>${5}</contents>",
+            "\t<primary-link title=\"${6}\" href=\"${7}\"/>",
+            "\t<secondary-link title=\"${8}\" href=\"${9}\"/>",
+            "</block-billboard>"
+        ]
+    },
+    "block-section": {
+        "scope": "html",
+        "prefix": "block-section",
+        "body": [
+            "<block-section id=\"${1}\" className=\"${2}\" level=\"${3}\" title=\"${4}\" alt=\"${5}\">",
+            "\t<lead>${6}</lead>",
+            "</block-section>"
+        ]
+    },
+    "block-box": {
+        "scope": "html",
+        "prefix": "block-box",
+        "body": [
+            "<block-box className=\"${1}\">${2}</block-box>"
+        ]
+    },
+    "block-cards": {
+        "scope": "html",
+        "prefix": "block-cards",
+        "body": [
+            "<block-cards className=\"${1}\">${2}</block-cards>"
+        ]
+    },
+    "block-dimension": {
+        "scope": "html",
+        "prefix": "block-dimension",
+        "body": [
+            "<block-dimension className=\"${1}\">${2}</block-dimension>"
+        ]
+    },
+    "block-news": {
+        "scope": "html",
+        "prefix": "block-news",
+        "body": [
+            "<block-news className=\"${1}\" json=\"${2}\"/>"
+        ]
+    },
+    "block-pagenav": {
+        "scope": "html",
+        "prefix": "block-pagenav",
+        "body": [
+            "<block-pagenav className=\"${1}\">${2}</block-pagenav>"
+        ]
+    },
+    "block-dimension--box": {
+        "scope": "html",
+        "prefix": "block-dimension--box",
+        "body": [
+            "<block-dimension--box className=\"${1}\">${2}</block-dimension--box>"
+        ]
+    },
+    "block-dimension--contents": {
+        "scope": "html",
+        "prefix": "block-dimension--contents",
+        "body": [
+            "<block-dimension--contents className=\"${1}\" layer=\"${2|1,2,3,4,5,6,7,8,9,10|}\">${3}</block-dimension--contents>"
+        ]
+    },
+    "block-dimension--layer": {
+        "scope": "html",
+        "prefix": "block-dimension--layer",
+        "body": [
+            "<block-dimension--layer className=\"${1}\" layer=\"${2|1,2,3,4,5,6,7,8,9,10|}\">${3}</block-dimension--layer>"
+        ]
+    },
+    "block-ui--button": {
+        "scope": "html",
+        "prefix": "block-ui--button",
+        "body": [
+            "<block-ui--button className=\"${1}\" href=\"${2}\" label=\"${3}\"/>"
+        ]
+    }
+}

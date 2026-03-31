@@ -1,2 +1,2 @@
 <?php
-define('DIST_NAME','dist');
+//define('DIST_NAME','dist');

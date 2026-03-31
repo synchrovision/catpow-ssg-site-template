@@ -49,4 +49,7 @@ include TMPL_DIR.'/_template/header.php';
 	</lead>
 	<block-cards items="feature-sections"/>
 </block-section>
+<form class="cmf-form"></form>
+<script src="mailform/mailer/mailer.php"></script>
+<link rel="stylesheet" href="mailform/css/theme-standard.css"/>
 <?php include TMPL_DIR.'/_template/footer.php';?>

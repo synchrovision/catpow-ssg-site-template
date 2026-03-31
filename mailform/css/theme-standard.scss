@@ -1,0 +1,216 @@
+@import 'style_config.scss';
+
+.cmf{
+	&-form{
+		@include bnd((p:r,pd:20));
+		&.is-locked{
+			&::before{
+				content:'';
+				@include bnd((d:b,p:a,i:0));
+				@include bg((c:b 1 .2));
+			}
+		}
+	}
+	&-link{
+		@include txt((td:u));
+		&:hover{
+			@include txt((c:m));
+		}
+	}
+	&-contents{
+		@include bnd((w:a 960,mg:50 a));
+	}
+	&-heading{
+		@include bnd((d:b,p:r,mgb:40,pdb:20));
+		@include txt((a:c,p:32,b:k));
+		&::after{
+			content:'';
+			@include bnd((d:b,p:a,b:0,l:0,r:0,mg:a,w:100,h:1));
+			@include bg((c:t));
+		}
+	}
+	&-text{
+		@include bnd((mg:40 20));
+		@include txt((a:j,p:16,h:2em));
+		&.center{
+			@include txt((a:c));
+		}
+	}
+	&-input{
+		@include bnd((p:r));
+		input:not([type="radio"],[type="checkbox"]){
+			@include bnd((pd:10,bs:c,w:a calc(100% - 3rem)));
+			@include bdr((s:s,w:1,c:t 50));
+			@include txt((p:16));
+		}
+		&-textarea{
+			@include bnd((d:b,w:f,pd:10,bs:b));
+			@include txt((p:16));
+		}
+		&-select{
+			@include bnd((d:b,ap:n,w:max,pd:10));
+			@include bdr((s:s,w:1,c:t 50));
+			@include txt((a:c,p:16));
+		}
+		&-checkbox,&-radio{
+			&__item{
+				@include bnd((d:ib,p:r,pd:10,pdl:30,mg:5));
+				&-input{
+					@include bnd((p:a,t:15,l:5));
+				}
+			}
+		}
+		&__alert{
+			@include bnd((d:b,p:a,w:max,t:-2.5em,l:0,r:0,pd:.5em,mg:a));
+			@include bg((c:m));
+			@include bdr((r:3));
+			@include txt((p:16,h:1em,c:b));
+			@include shd((b:1));
+			@include trn((t:.2s,o:1,y:0));
+			@include usr((e:n));
+			&::after{
+				content:'';
+				@include bnd((d:b,w:0,p:a,t:f,l:0,r:0,mg:a));
+				@include bdr((s:s,w:8,c:n));
+				@include bdr((p:t,c:m));
+			}
+		}
+		&.is-inline{
+			@include bnd((d:ib,w:a f));
+		}
+		&.is-block{
+			@include bnd((d:b));
+		}
+		&:not(.is-error) &__alert{
+			@include trn((o:0,y:.5em));
+		}
+	}
+	&-ui{
+		&-zipcode{
+			&__sec0{
+				@include bnd((d:ib,w:3ch));
+			}
+			&__sec1{
+				@include bnd((d:ib,w:4ch));
+			}
+			&__sep{
+				@include bnd((d:ib,mg:a .5em));
+			}
+		}
+	}
+	&-label{
+		@include usr((c:p));
+	}
+	&-table{
+		@include tbl(());
+		@include bnd((w:f));
+		>tbody{
+			>tr{
+				&:not(:last-child){
+					@include bdr((p:b,s:s,w:1,c:t 50));
+				}
+				&.required,&.optional{
+					>th::after{
+						@include bnd((d:b,p:a,pd:.25em .5em,h:min,t:0,b:0,r:12,mg:a));
+						@include txt((p:12,c:b));;
+					}
+				}
+				&.required{
+					>th::after{
+						content:'必須';
+						@include bg((c:m));
+					}
+				}
+				&.optional{
+					>th::after{
+						content:'任意';
+						@include bg((c:t 1 .5));
+					}
+				}
+				>th,>td{
+					@include bnd((pd:16));
+					@include txt((p:14,h:1.5em,w:r,v:m));
+					@include bdr((s:n));
+				}
+				>th{
+					@include bnd((p:r,w:200,pdr:80));
+					@include txt((a:l,b:k));
+					@include bg((c:t 1 .1));
+				}
+				>td{
+					@include bnd((p:r));
+				}
+			}
+		}
+		@include bp(-960){
+			@include bnd((ap:n,d:b));
+			>tbody{
+				@include bnd((ap:n,d:b));
+				>tr{
+					@include bnd((ap:n,d:b));
+					>th,>td{
+						@include bnd((ap:n,d:b,w:f,pd:12,bs:b));
+					}
+					>th{
+						@include bnd((pdr:80));
+					}
+				}
+			}
+		}
+	}
+	&-buttons{
+		@include flx((w:w,j:c));
+		@include bnd((mg:50 a,pd:10));
+		@include txt((l:n));
+		&__item{
+			@include bnd((f:0 0 350,pd:10));
+		}
+	}
+	&-button{
+		@include bnd((d:b,pd:16 8,w:f 350,bs:b));
+		@include bg((c:b));
+		@include txt((a:c,p:24,c:m));
+		@include usr((c:p));
+		@include trn((t:.2s));
+		&.primary{
+			@include bg((c:m));
+			@include txt((c:b));
+		}
+		&.secondary{
+			@include bdr((s:s,w:1));
+		}
+		&.disabled{
+			@include trn((o:.5,gry:80%));
+			@include usr((c:nd));
+		}
+	}
+	&-flex{
+		@include flx((w:w,a:c));
+		@include bnd((pd:10));
+		&__item{
+			@include bnd((f:1 1 400,pd:10));
+		}
+	}
+	&-annotation{
+		@include bnd((d:b,p:r,pd:5,pdl:2em));
+		@include txt((p:15));
+		&::before{
+			content:'※';
+			@include bnd((d:b,p:a,t:5,l:5));
+		}
+	}
+	&-caption{
+		@include bnd((d:b,pd:5));
+		@include txt((p:14));
+	}
+	&-agreement{
+		@include bnd((d:b,pd:8,mg:10 a,w:fit));
+		@include txt((p:14,b:k));
+		@include usr((c:p));
+	}
+	&-preview{
+		@include bnd((w:c,mg:a));
+		@include shd((b:4));
+		*{all:revert;}
+	}
+}

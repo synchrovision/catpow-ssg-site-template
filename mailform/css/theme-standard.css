@@ -1,0 +1,350 @@
+@charset "UTF-8";
+.cmf-form {
+  position: relative;
+  padding: 20px;
+}
+.cmf-form.is-locked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  inset: 0px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.cmf-link {
+  text-decoration-line: underline;
+}
+.cmf-link:hover {
+  color: #E07D00;
+}
+.cmf-contents {
+  max-width: 960px;
+  width: auto;
+  margin: 50px auto;
+}
+.cmf-heading {
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+  word-break: keep-all;
+}
+.cmf-heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 100px;
+  height: 1px;
+  background-color: #666;
+}
+.cmf-text {
+  margin: 40px 20px;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 2em;
+}
+.cmf-text.center {
+  text-align: center;
+}
+.cmf-input {
+  position: relative;
+}
+.cmf-input input:not([type="radio"], [type="checkbox"]) {
+  padding: 10px;
+  box-sizing: content-box;
+  max-width: calc(100% - 3rem);
+  width: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b3b3b3;
+  font-size: 16px;
+}
+.cmf-input-textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.cmf-input-select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: max-content;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b3b3b3;
+  text-align: center;
+  font-size: 16px;
+}
+.cmf-input-checkbox__item, .cmf-input-radio__item {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  margin: 5px;
+}
+.cmf-input-checkbox__item-input, .cmf-input-radio__item-input {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+.cmf-input__alert {
+  display: block;
+  position: absolute;
+  width: max-content;
+  top: -2.5em;
+  left: 0px;
+  right: 0px;
+  padding: 0.5em;
+  margin: auto;
+  background-color: #E07D00;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1em;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 1;
+  transform: -webkit- translateY(0px);
+  transform: translateY(0px);
+  pointer-events: none;
+}
+.cmf-input__alert::after {
+  content: "";
+  display: block;
+  width: 0px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  border-style: solid;
+  border-width: 8px;
+  border-color: transparent;
+  border-top-color: #E07D00;
+}
+.cmf-input.is-inline {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+}
+.cmf-input.is-block {
+  display: block;
+}
+.cmf-input:not(.is-error) .cmf-input__alert {
+  opacity: 0;
+  transform: -webkit- translateY(0.5em);
+  transform: translateY(0.5em);
+}
+.cmf-ui-zipcode__sec0 {
+  display: inline-block;
+  width: 3ch;
+}
+.cmf-ui-zipcode__sec1 {
+  display: inline-block;
+  width: 4ch;
+}
+.cmf-ui-zipcode__sep {
+  display: inline-block;
+  margin: auto 0.5em;
+}
+.cmf-label {
+  cursor: pointer;
+}
+.cmf-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+}
+.cmf-table > tbody > tr:not(:last-child) {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #b3b3b3;
+}
+.cmf-table > tbody > tr.required > th::after, .cmf-table > tbody > tr.optional > th::after {
+  display: block;
+  position: absolute;
+  padding: 0.25em 0.5em;
+  height: min-content;
+  top: 0px;
+  bottom: 0px;
+  right: 12px;
+  margin: auto;
+  font-size: 12px;
+  color: #fff;
+}
+.cmf-table > tbody > tr.required > th::after {
+  content: "必須";
+  background-color: #E07D00;
+}
+.cmf-table > tbody > tr.optional > th::after {
+  content: "任意";
+  background-color: rgba(102, 102, 102, 0.5);
+}
+.cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 400;
+  vertical-align: middle;
+  border-style: none;
+}
+.cmf-table > tbody > tr > th {
+  position: relative;
+  width: 200px;
+  padding-right: 80px;
+  text-align: left;
+  word-break: keep-all;
+  background-color: rgba(102, 102, 102, 0.1);
+}
+.cmf-table > tbody > tr > td {
+  position: relative;
+}
+@media (max-width:960px) {
+  .cmf-table {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody > tr {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  .cmf-table > tbody > tr > th {
+    padding-right: 80px;
+  }
+}
+.cmf-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 10px;
+  list-style: none;
+}
+.cmf-buttons__item {
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 350px;
+  padding: 10px;
+}
+.cmf-button {
+  display: block;
+  padding: 16px 8px;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  font-size: 24px;
+  color: #E07D00;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.cmf-button.primary {
+  background-color: #E07D00;
+  color: #fff;
+}
+.cmf-button.secondary {
+  border-style: solid;
+  border-width: 1px;
+}
+.cmf-button.disabled {
+  opacity: 0.5;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  cursor: no-drop;
+}
+.cmf-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px;
+}
+.cmf-flex__item {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  padding: 10px;
+}
+.cmf-annotation {
+  display: block;
+  position: relative;
+  padding: 5px;
+  padding-left: 2em;
+  font-size: 15px;
+}
+.cmf-annotation::before {
+  content: "※";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.cmf-caption {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+.cmf-agreement {
+  display: block;
+  padding: 8px;
+  margin: 10px auto;
+  width: fit-content;
+  font-size: 14px;
+  word-break: keep-all;
+  cursor: pointer;
+}
+.cmf-preview {
+  width: c;
+  margin: auto;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+}
+.cmf-preview * {
+  all: revert;
+}
+/*# sourceMappingURL=./theme-standard.css.map */

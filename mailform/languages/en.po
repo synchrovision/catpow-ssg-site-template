@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-11-27 13:37+0900\n"
+"PO-Revision-Date: 2021-11-27 13:37+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: form\n"
+"X-Poedit-SearchPath-1: mail\n"
+
+#: form/init.php:4
+msgid "氏名"
+msgstr "name"
+
+#~ msgid "色指定をHEX値で入力して下さい"
+#~ msgstr "input with HEX"
+
+#~ msgid "メールアドレスを入力してください"
+#~ msgstr "input valid mail address"
+
+#~ msgid "半角英数で入力してください"
+#~ msgstr "input with alphanumeric"
+
+#, php-format
+#~ msgid "%d文字の半角英数で入力してください"
+#~ msgstr "input with less than %d alphanumeric letters"
+
+#~ msgid "ひらがなで入力してください"
+#~ msgstr "input with hiragana"
+
+#~ msgid "HTML構文にエラーがあります"
+#~ msgstr "HTML has syntax error"
+
+#~ msgid "カタカナで入力してください"
+#~ msgstr "input with katakana"
+
+#~ msgid "数字で入力してください"
+#~ msgstr "input numeric letters"
+
+#, php-format
+#~ msgid "%d桁の数字で入力してください"
+#~ msgstr "input  %d numeric letters"
+
+#, php-format
+#~ msgid "%d〜%dの数値で入力してください"
+#~ msgstr "input number between %d and %d"
+
+#~ msgid "数値で入力してください"
+#~ msgstr "input numeric value"
+
+#~ msgid "入力形式が正しくありません"
+#~ msgstr "invalid input"
+
+#~ msgid "電話番号が正しくありません"
+#~ msgstr "input valid phone number"
+
+#~ msgid "入力して下さい"
+#~ msgstr "required"
+
+#~ msgid "選択項目にない値です"
+#~ msgstr "not in selection"
+
+#~ msgid "不正な値です"
+#~ msgstr "invalid value"
+
+#, php-format
+#~ msgid "%d文字で入力してください"
+#~ msgstr "input %d letters"
+
+#, php-format
+#~ msgid "%d文字以内で入力してください"
+#~ msgstr "input less than %d letters"
+
+#, php-format
+#~ msgid "%sの入力が正しくありません"
+#~ msgstr "value of %s is not valid"
+
+#~ msgid "郵便番号を入力してください（半角数字）"
+#~ msgstr "input valid zip code"

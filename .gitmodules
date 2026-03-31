@@ -1,3 +1,6 @@
 [submodule "_compiler"]
 	path = _compiler
 	url = https://github.com/synchrovision/catpow-ssg.git
+[submodule "mailform/mailer"]
+	path = mailform/mailer
+	url = https://github.com/synchrovision/catpow-mailer.git

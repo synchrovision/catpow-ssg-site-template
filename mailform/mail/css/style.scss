@@ -1,0 +1,290 @@
+@import 'style_config.scss';
+@import 'mail_default_break';
+
+$sizes:(
+	c:600px
+);
+
+.mail{
+	&-body{
+		@include bnd((w:f));
+		&__thead{
+		}
+		&__tbody{
+		}
+		&__tfoot{
+		}
+		&-header{
+			&__th{
+				@include bnd((pd:20));
+				@include bg((c:m));
+				@include txt((a:wc,p:20,c:i));
+				>.logo{
+					@include bnd((d:b,w:a,h:40));
+				}
+				>.title{
+					@include bnd((d:b,w:c,h:a));
+				}
+			}
+		}
+		&-row{
+			&__td{
+				@include bnd((pd:40 0));
+				@include txt((a:wc));
+				.link{
+					@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
+					@include bdr((s:s,w:2,r:1em));
+					@include txt((a:c,p:18,c:m,h:1em,td:n,w:b));
+				}
+			}
+			&.has-bg-color-strong{
+				@include bg((c:m));
+			}
+			&.has-bg-color-weak{
+				@include bg((c:s));
+			}
+			&.is-align-center{
+				@include txt((a:c));
+			}
+		}
+		&-footer{
+			&__td{
+				@include bnd((pd:20 0));
+				@include bg((c:m));
+				@include txt((a:wc,p:16,w:b,c:i));
+				>.link{
+					@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
+					@include bdr((s:s,w:1,r:1em));
+					@include txt((a:c,p:18,c:i,h:1em,td:n));
+				}
+			}
+		}
+	}
+	&-heading{
+		@include bnd((mg:0 a .5em));
+		@include txt((c:m,w:b));
+		&.is-level-1{
+			@include txt((p:36,c:m));
+		}
+		&.is-level-2{
+			@include txt((p:24,c:m));
+		}
+		&.is-level-3{
+			@include txt((p:18,c:m));
+		}
+		&.is-level-4{
+			@include txt((p:16,c:m));
+		}
+		&.is-level-5{
+			@include txt((p:14,c:m));
+		}
+	}
+	&-text{
+		@include bnd((mg:0 a .5em));
+		@include txt((c:t));
+		&.is-level-1{
+			@include txt((p:20,c:m));
+		}
+		&.is-level-2{
+			@include txt((p:18,c:m));
+		}
+		&.is-level-3{
+			@include txt((p:16,c:m));
+		}
+		&.is-level-4{
+			@include txt((p:14,c:m));
+		}
+		&.is-level-5{
+			@include txt((p:12,c:m));
+		}
+	}
+	&-button{
+		@include bnd((w:f));
+		&-item{
+			@include bnd((pd:2em .5em));
+			@include txt((a:wc));
+			&-button{
+				@include bnd((d:b,pd:.5em 1em));
+				@include bdr((r:.2em));
+				@include bg((c:m));
+				@include txt((a:c,td:n,p:1.1em,w:b,c:i));
+			}
+		}
+		&__tbody{
+			&-tr{
+			}
+		}
+	}
+	&-ordered{
+		@include bnd((w:c));
+		@include txt((a:l));
+		&-item{
+			&-pref{
+				@include bnd((pd:20 8,w:3ch));
+				@include txt((a:c,c:m,p:40,w:h));
+			}
+			&-content{
+				@include bnd((pd:20 8));
+			}
+		}
+		&__tbody{
+		}
+	}
+	&-index{
+		@include bnd((w:a c));
+		@include txt((a:l));
+		&-item{
+			&-pref,&-content{
+				@include bnd((pd:.25em .1em));
+			}
+			&-pref{
+				@include bnd((w:3ch));
+			}
+		}
+		&__tbody{
+		}
+	}
+	
+	&-list{
+		@include bnd((w:a c));
+		@include txt((a:l));
+		&-item{
+			&-marker,&-content{
+				@include bnd((pd:.25em .1em));
+			}
+			&-marker{
+				@include bnd((w:1em));
+				@include txt((c:m));
+			}
+		}
+		&__tbody{
+		}
+	}
+	&-notes{
+		@include bnd((w:a c));
+		@include txt((a:l,p:.8em));
+		&-item{
+			&-marker,&-content{
+				@include bnd((pd:.25em .1em));
+			}
+			&-marker{
+				@include bnd((w:1em));
+			}
+		}
+		&__tbody{
+		}
+	}
+	
+	&-section{
+		$block:&;
+		@include bnd((w:a c,mgb:20));
+		@include txt((a:l));
+		&-header{
+			$row:&;
+			&__th{
+				@include bnd((pd:.25em .5em));
+				@include txt((w:b,c:m));
+				#{$row}.is-level-1>&{
+					@include txt((a:c,p:36));
+				}
+				#{$row}.is-level-2>&{
+					@include txt((p:24));
+				}
+				#{$row}.is-level-3>&{
+					@include txt((p:18));
+				}
+				#{$row}.is-level-4>&{
+					@include txt((p:16));
+				}
+				#{$row}.is-level-5>&{
+					@include txt((p:14));
+				}
+			}
+		}
+		&-row{
+			&__td{
+				@include bnd((pd:20 4));
+			}
+		}
+		&-footer{
+			&__td{
+			}
+		}
+	}
+	&-frame{
+		$block:&;
+		@include bnd((d:b,w:c,mgb:20,o:h));
+		@include bdr((s:s,w:2,c:t 20,r:.5em));
+		@include txt((a:l));
+		&-header{
+			$row:&;
+			&__th{
+				@include bnd((pd:.5em 1em));
+				@include bg((c:m));
+				@include txt((w:b));
+				#{$row}.is-level-1>&{
+					@include bg((c:m));
+					@include txt((p:36,c:i));
+				}
+				#{$row}.is-level-2>&{
+					@include bg((c:m));
+					@include txt((p:24,c:i));
+				}
+				#{$row}.is-level-3>&{
+					@include bg((c:m 10));
+					@include txt((p:18,c:m));
+				}
+				#{$row}.is-level-4>&{
+					@include bg((c:m 10));
+					@include txt((p:16,c:m));
+				}
+				#{$row}.is-level-5>&{
+					@include bg((c:m 10));
+					@include txt((p:14,c:m));
+				}
+			}
+		}
+		&-row{
+			&__td{
+				@include bnd((pd:20));
+			}
+		}
+		&-footer{
+			&__td{
+				@include bnd((pd:.5em 1em));
+				@include bg((c:t 10));
+			}
+		}
+	}
+	
+	&-mediatext{
+		&-item{
+		}
+		&-media{
+			@include bnd((w:100,pd:20 16));
+			.image{
+				@include bnd((d:b,w:f,h:a));
+			}
+		}
+		&-text{
+			@include bnd((pd:20 16));
+		}
+		&__tbody{
+		}
+	}
+	&-showcase{
+		&-item{
+		}
+		&-media{
+			@include bnd((w:200,pd:20 16));
+			.image{
+				@include bnd((d:b,w:f,h:a));
+			}
+		}
+		&-text{
+			@include bnd((pd:20 16));
+		}
+		&__tbody{
+		}
+	}
+}
